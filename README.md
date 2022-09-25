@@ -1,15 +1,18 @@
-# Project Name
+# Space Shooter
 
-Context and date
+9/24/2022
 
-Description
+Space Shooter 2D Game
 
 ## Implementation
-Which features you included
+Background, levels,
 
 ## References
+Jason Francis
+https://itch.io/game-assets
 
 ## Future Development
+None
 
 ## Created by
-Jason Francis
+Aiden Pedroncelli
