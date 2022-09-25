@@ -1,0 +1,85 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Assets/Explosion/Explosion1/Explosion1_8.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Explosion/Explosion1/Explosion1_7.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Explosion/Explosion1/Explosion1_9.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Explosion/Explosion1/Explosion1_10.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Explosion/Explosion1/Explosion1_11.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Explosion/Explosion1/Explosion1_6.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Explosion/Explosion1/Explosion1_1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Explosion/Explosion1/Explosion1_3.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Explosion/Explosion1/Explosion1_4.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Explosion/Explosion1/Explosion1_5.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Explosion/Explosion1/Explosion1_2.png" type="Texture" id=11]
+[ext_resource path="res://Effects/Explosion.gd" type="Script" id=12]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[node name="Explosion" type="AnimatedSprite"]
+frames = SubResource( 12 )
+frame = 3
+offset = Vector2( 0, -30 )
+script = ExtResource( 12 )
+
+[connection signal="animation_finished" from="." to="." method="_on_Explosion_animation_finished"]
